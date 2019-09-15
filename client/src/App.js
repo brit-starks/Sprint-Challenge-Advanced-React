@@ -12,17 +12,17 @@ function App() {
     Axios.get('http://localhost:5000/api/players')
     .then(res => {
       console.log(res)
-      setPlayer(res.data.name)
-      
+      setPlayer(res.data)
     })
     .catch(err => console.log("Nope", err))
   }, []);
 
   return (
     <div className="App">
-      {/* {player.map((card) => {
-        <PlayerCard playerinfo={player} />
-      })} */}
+      {/* <h1>Happy Coding</h1> */}
+      {player.map( (player, key) => 
+        <PlayerCard playerInfo={player} key={player.id}/>
+      )}
     </div>
   );
 }
