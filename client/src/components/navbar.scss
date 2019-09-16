@@ -1,0 +1,16 @@
+.nav-bar {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  height: 3rem;
+
+  a{
+    margin: 12px 0 0 0;
+    text-decoration: none;
+    color: goldenrod;
+  }
+      a:hover{
+        text-decoration: underline;
+        font-size: 1.5rem;
+      }
+}

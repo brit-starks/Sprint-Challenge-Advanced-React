@@ -3,6 +3,7 @@ import './app.scss';
 import axios from 'axios';
 
 import PlayerCard from './components/PlayerCard';
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -19,11 +20,14 @@ function App() {
 
   return (
     <div className="App">
+      <nav>
+        <NavBar />
+      </nav>
       <div className='title'>
         <h1>Women's World Cup</h1>
       </div>
       <div>
-        <h2 className='subtitle'>Players:</h2>
+        <h2 className='subtitle'>Players</h2>
       {player.map( (player, key) => 
         <PlayerCard playerInfo={player} key={player.id}/>
       )}
