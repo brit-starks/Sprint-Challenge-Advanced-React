@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import PlayerCard from './components/PlayerCard';
 import NavBar from './components/NavBar';
+import Form from './components/Form';
 
 function App() {
 
@@ -20,9 +21,15 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
-        <NavBar />
-      </nav>
+      <header>
+        <nav>
+          <NavBar />
+        </nav>
+        <div className='form'>
+          <Form />
+        </div>
+      </header>
+
       <div className='title'>
         <h1>Women's World Cup</h1>
       </div>
