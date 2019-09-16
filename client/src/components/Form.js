@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import './form.scss';
 
+// import { useForm } from './useForm';
+
 const Form = () => {
-  const [search, setSearch] = useState([]);
+  // const [search, setSearch] = useState([]);
   const [fetchInput, setFetchInput] = useState([]);
 
-
   const handleChange = e => {
-    setSearch(e.target.value);
+    setFetchInput(e.target.value);
   }
 
   const handleSubmit = e => {
     e.preventDefault();
-    setFetchInput(`http://localhost:5000/api/players`)
+    // setFetchInput(``);
   }
 
   return(
@@ -22,8 +23,10 @@ const Form = () => {
       name='search'
       value={fetchInput}
       onChange={handleChange}
-      placeholder='Search player'
+      placeholder='Search soccer'
     />
+
+    <button>Search</button>
   </form>
   )
 
