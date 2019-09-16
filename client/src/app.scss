@@ -1,0 +1,21 @@
+.App {
+  box-sizing: border-box;
+  background-color: gray;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    color: azure;
+    text-decoration-line: underline overline;
+    text-decoration-color: gold;
+  }
+
+  .subtitle {
+    display: flex;
+    text-decoration: underline;
+    justify-content: center;
+    font-size: 2rem;
+    color: lightgray;
+  }
+}
