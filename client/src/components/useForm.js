@@ -1,10 +1,9 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 
-// export const useForm = (initialValue, cb) => {
+const useForm = () => {
+  const [fetchInput, setFetchInput] = useState([]);
 
-//   // const handleChange = e => {
-//   //   setSearch(e.target.value);
-//   // }
+  return [fetchInput, setFetchInput]
+}
 
-//   // return [initialValue, cb, handleChange];
-// }
+export default useForm;

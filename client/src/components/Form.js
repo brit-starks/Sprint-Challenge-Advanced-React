@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './form.scss';
 
-// import { useForm } from './useForm';
+import useForm from './useForm';
 
 const Form = () => {
   // const [search, setSearch] = useState([]);
-  const [fetchInput, setFetchInput] = useState([]);
+  const [fetchInput, setFetchInput] = useForm()
 
   const handleChange = e => {
     setFetchInput(e.target.value);
@@ -30,6 +30,13 @@ const Form = () => {
   </form>
   )
 
+  
 }
+
+    // const useForm = () => {
+    //   const [fetchInput, setFetchInput] = useState([]);
+    
+    //   return [fetchInput, setFetchInput]
+    // }
 
 export default Form;
