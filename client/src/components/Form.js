@@ -1,20 +1,11 @@
 import React, { useState } from 'react';
 import './form.scss';
 
-import useForm from './useForm';
+import useForm from '../hooks/useForm';
 
 const Form = () => {
   // const [search, setSearch] = useState([]);
-  const [fetchInput, setFetchInput] = useForm()
-
-  const handleChange = e => {
-    setFetchInput(e.target.value);
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    // setFetchInput(``);
-  }
+  const [fetchInput, setFetchInput, handleChange, handleSubmit] = useForm('')
 
   return(
   <form className='form' submit={handleSubmit}>
@@ -32,11 +23,5 @@ const Form = () => {
 
   
 }
-
-    // const useForm = () => {
-    //   const [fetchInput, setFetchInput] = useState([]);
-    
-    //   return [fetchInput, setFetchInput]
-    // }
 
 export default Form;
