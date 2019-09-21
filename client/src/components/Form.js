@@ -5,15 +5,23 @@ import useForm from '../hooks/useForm';
 
 const Form = () => {
   // const [search, setSearch] = useState([]);
-  const [fetchInput, setFetchInput, handleChange, handleSubmit] = useForm('')
+  const [input, setInput, handleChange, handleSubmit] = useForm('')
 
   return(
   <form className='form' submit={handleSubmit}>
     <input
       type='text'
       name='search'
-      value={fetchInput}
-      onChange={handleChange}
+      value={input.fetchInput}
+      onChange={input.handleChange}
+      placeholder='Search soccer'
+    />
+
+    <input 
+      type='text'
+      name='signUp'
+      value={input.fetchInput}
+      onChange={input.handleChange}
       placeholder='Search soccer'
     />
 

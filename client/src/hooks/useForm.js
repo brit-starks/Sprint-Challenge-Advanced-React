@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-const useForm = initialValue => {
-  const [Value, setValue] = useState(initialValue);
+const useForm = (cb) => {
+  const [value, setValue] = useState({});
 
   const handleChange = e => {
     setValue(e.target.value);
@@ -9,10 +9,10 @@ const useForm = initialValue => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    setValue(e.target.value);
+    setValue({...value, [e.target.name]: e.target.value});
   }
 
-  return [Value, setValue, handleChange, handleSubmit]
+  return [value, setValue, handleChange, handleSubmit, cb]
 }
 
 export default useForm;
