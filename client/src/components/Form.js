@@ -17,14 +17,6 @@ const Form = () => {
       placeholder='Search soccer'
     />
 
-    <input 
-      type='text'
-      name='signUp'
-      value={input.fetchInput}
-      onChange={input.handleChange}
-      placeholder='Search soccer'
-    />
-
     <button>Search</button>
   </form>
   )
