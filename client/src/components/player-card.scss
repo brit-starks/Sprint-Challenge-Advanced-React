@@ -1,0 +1,16 @@
+.player-wrapper {
+  width: 35%;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  border: 2px solid gold;
+
+  .player {
+    margin: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+  }
+}
